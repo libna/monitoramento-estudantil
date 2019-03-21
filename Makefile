@@ -24,6 +24,7 @@ conf-git-wolaci:
 	git config --global user.email "wolacijose8@gmail.com"	
 
 conf:
+	cd student-monitoring
 	sudo apt-get install php7.2 php7.2-mbstring php7.2-mysql php7.2-intl php7.2-xml composer # isso só serve pra sistemas que usam o apt
 	composer install --no-scripts
 	# npm install
