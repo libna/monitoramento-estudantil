@@ -6,5 +6,11 @@
 </head>
 <body>
 
+<form>
+	<input type="text" name="pergunta">
+	<input type="submit">
+</form>
+
+
 </body>
 </html>
