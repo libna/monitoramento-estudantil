@@ -15,7 +15,7 @@
                             <label for="matrícula" class="col-md-4 col-form-label text-md-right">{{ __('Matrícula') }}</label>
 
                             <div class="col-md-6">
-                                <input id="matrícula" type="matrícula" class="form-control{{ $errors->has('matrícula') ? ' is-invalid' : '' }}" name="matrícula" value="{{ old('matrícula') }}" required autofocus>
+                                <input id="matricula" type="matricula" class="form-control{{ $errors->has('matricula') ? ' is-invalid' : '' }}" name="matricula" value="{{ old('matricula') }}" required autofocus>
 
                                 @if ($errors->has('matrícula'))
                                     <span class="invalid-feedback" role="alert">

@@ -11,14 +11,14 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group row">
-                            <label for="matrícula" class="col-md-4 col-form-label text-md-right">{{ __('Matrícula') }}</label>
+                            <label for="matricula" class="col-md-4 col-form-label text-md-right">{{ __('Matrícula') }}</label>
 
                             <div class="col-md-6">
-                                <input id="matrícula" type="text" class="form-control{{ $errors->has('matrícula') ? ' is-invalid' : '' }}" matrícula="matrícula" value="{{ old('matrícula') }}" required autofocus>
+                                <input id="matricula" type="text" class="form-control{{ $errors->has('matricula') ? ' is-invalid' : '' }}" name="matricula" value="{{ old('matricula') }}" required autofocus>
 
-                                @if ($errors->has('matrícula'))
+                                @if ($errors->has('matricula'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('matrícula') }}</strong>
+                                        <strong>{{ $errors->first('matricula') }}</strong>
                                     </span>
                                 @endif
                             </div>
