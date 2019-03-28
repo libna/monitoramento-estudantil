@@ -24,4 +24,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/form', 'ControllerForm@criarForm');
+// Route::get('/form', 'ControllerForm@criarForm');
+Route::resource('form', 'FormController');
