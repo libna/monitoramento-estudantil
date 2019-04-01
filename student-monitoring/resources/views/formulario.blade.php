@@ -53,28 +53,54 @@
       <option>8</option>
 
     </select>
+  	<fieldset>
+  	<label for="exampleFormControlTextarea1">Você está cursando em algum Campus do IFPE?</label>				
+    <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+    <label class="form-check-label" for="exampleRadios1">
+      Sim
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+    <label class="form-check-label" for="exampleRadios2">
+      Não
+    </label>
+  </div>
+  </fieldset>
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Conte um pouco sobre sua experiência no Campus Igarassu:</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-	
+  
 
-	<fieldset>
-	<label for="exampleFormControlTextarea1">Você está cursando em algum Campus do IFPE?</label>				
+<fieldset>
+  <label for="exampleFormControlTextarea1">Estado civil?</label>        
   <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
-    Sim
+    Solteiro
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
   <label class="form-check-label" for="exampleRadios2">
-    Não
+    Casado
   </label>
 </div>
-</fieldset>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Prefiro não informar
+  </label>
+</div>
+</fieldset> <br>
+ <div class="form-group">
+    <label for="exampleFormControlTextarea1">Conte-nos sobre como sua vida ficou após ingressar no campus Igarassu:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
 
 </form>
 <button type="submit" class="btn btn-primary">Enviar Formulário</button>
