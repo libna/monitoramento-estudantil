@@ -15,10 +15,10 @@ class AdicionarIdDoUsuarioEIdPerguntaATabelaResposta extends Migration
     {
         Schema::table('respostas', function (Blueprint $table) {
 
-            $table->Integer('perguntas_id')->unsigned()
+            $table->Integer('perguntas_id')->unsigned();
             $table->foreign('perguntas_id')->references('id')->on('perguntas');
 
-            $table->Integer('users_id')->unsigned()
+            $table->Integer('users_id')->unsigned();
             $table->foreign('users_id')->references('id')->on('users');
         });
     }
@@ -32,6 +32,11 @@ class AdicionarIdDoUsuarioEIdPerguntaATabelaResposta extends Migration
     {
         Schema::table('respostas', function (Blueprint $table) {
             
+            $table->dropForeign(['perguntas_id']);
+            $table->dropColumn(['perguntas_id']);
+
+            $table->dropForeign(['users_id']);
+            $table->dropColumn(['users_id']);
         });
     }
 }
