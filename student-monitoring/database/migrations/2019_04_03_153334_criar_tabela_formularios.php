@@ -15,6 +15,7 @@ class CriarTabelaFormularios extends Migration
     {
         Schema::create('formularios', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('titulo');
             $table->timestamps();
         });
     }
