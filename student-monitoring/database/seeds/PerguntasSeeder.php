@@ -13,10 +13,11 @@ class PerguntasSeeder extends Seeder
     {
     	DB::table('perguntas')->insert(
     		[
-    			'id'	 			 => 1,
+    			
     			'titulo' 			 => 'nome completo',
     			'form_id'			 => 1,
     			'tipo_de_pergunta_id'=> 1
+
     		
     	]);
     	// DB::table('perguntas')->insert([
