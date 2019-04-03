@@ -14,7 +14,7 @@
 				margin-top: 20px;
 			}
 		</style>	
-    <title>Hello, world!</title>
+    <title>Questionário #1</title>
   </head>
   <body>
   <div class="container">
@@ -23,85 +23,60 @@
     <label for="exampleFormControlInput1">Nome Completo:</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Exemplo: José da Silva">
   </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">CPF</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
     <div class="form-group">
-    <label for="exampleFormControlSelect2">O que você cursou no Campus Igarassu?</label>
-    <select  class="form-control" id="exampleFormControlSelect2">
-      <option>Informática para Internet</option>
-      <option>Logística</option>
-      <option>Gestão</option>
-    </select>
+    <label for="exampleFormControlInput1">RG</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlInput1">CEP</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1">
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect2">O que você está cursando no IFPE campus Igarassu?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Quantidade de Períodos do Curso:</label>
-    <select  class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Quantidade de matérias do Período:</label>
-    <select  class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <option>8</option>
-
-    </select>
-  	<fieldset>
-  	<label for="exampleFormControlTextarea1">Você está cursando em algum Campus do IFPE?</label>				
-    <div class="form-check">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-    <label class="form-check-label" for="exampleRadios1">
-      Sim
-    </label>
-  </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-    <label class="form-check-label" for="exampleRadios2">
-      Não
-    </label>
-  </div>
-  </fieldset>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Conte um pouco sobre sua experiência no Campus Igarassu:</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-  
-
-<fieldset>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Expectativas para o curso?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  	
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Qual sua primeira impressão sobre o campus Igarassu?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
   <label for="exampleFormControlTextarea1">Estado civil?</label>        
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Solteiro
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Casado
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Prefiro não informar
-  </label>
-</div>
-</fieldset> <br>
- <div class="form-group">
-    <label for="exampleFormControlTextarea1">Conte-nos sobre como sua vida ficou após ingressar no campus Igarassu:</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> <br>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Quais eram suas disciplinas favoritas no ensino médio?</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
-
-
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Você veio de escola pública ou privada?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlTextarea1">Você mora com seus pais ou algum familiar?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Você teve muitas dificuldades ao fazer o vestibular?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Como ficou sabendo sobre esse curso?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Como você se vê daqui a um ano e seis meses?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
 </form>
 <button type="submit" class="btn btn-primary">Enviar Formulário</button>
 </div>
