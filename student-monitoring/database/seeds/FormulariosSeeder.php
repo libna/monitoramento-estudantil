@@ -9,11 +9,11 @@ class FormulariosSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-    	DB::table('formularios')->insert([
-    		'id'=> 1,
-    		'titulo'=> 'Formulário de Entrada'
-    	]);
-    	}
+        public function run()
+        {
+        	DB::table('formularios')->insert([
+        		'id'=> 1,
+        		'titulo'=> 'Formulário de Entrada'
+        	]);
+        }
     }
