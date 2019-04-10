@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Formulario;
+use App\Pergunta;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
 {
@@ -14,8 +16,9 @@ class FormController extends Controller
      */
     public function index()
     {
-        //
-        return view('formulario');
+        $perguntas = Pergunta::all();
+
+        return view('formulario', compact('perguntas'));
     }
 
     /**
