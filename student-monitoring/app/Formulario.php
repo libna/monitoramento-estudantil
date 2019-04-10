@@ -8,7 +8,6 @@ class Formulario extends Model
 {
 	protected $table = 'formulario';
   protected $fillable = [
-    'pergunta',
-    'resposta'
+    'pergunta', 'resposta'
   ];
 }
