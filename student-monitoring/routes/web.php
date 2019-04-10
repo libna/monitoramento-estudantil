@@ -26,3 +26,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::get('/form', 'ControllerForm@criarForm');
 Route::resource('form', 'FormController');
+Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
