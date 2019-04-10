@@ -19,6 +19,9 @@
   </head>
   <body>
   <div class="container">
+  @foreach($form as $perguntas)
+      {{$perguntas['titulo ']}}
+  @endforeach
 	<form>
   <div class="form-group">
     <label for="exampleFormControlInput1">Nome Completo:</label>
