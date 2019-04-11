@@ -19,7 +19,7 @@ class AdicionarIdDoUsuarioEIdPerguntaATabelaResposta extends Migration
             $table->foreign('perguntas_id')->references('id')->on('perguntas');
 
             $table->Integer('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users');
+            $table->foreign('users_id')->references('id')->on('users')->default(1);
         });
     }
 
