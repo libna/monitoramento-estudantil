@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Formulario;
 use App\Pergunta;
+use App\Resposta;
+use App\Formulario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
@@ -14,6 +16,9 @@ class FormController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function __construct(){
+    //     $this->middleware('auth');
+    // }
     public function index()
     {
         $perguntas = Pergunta::all();
@@ -38,15 +43,18 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-          'form_pergunta'=>'required'
-          ]);
-        $form = new Formulario([
-          'pergunta' => $request->get('form_pergunta'),
-          'resposta' => ''
-          ]);
-        $form->save();
-        return redirect(route('form.index'))->with('success', 'Stock has been added');
+        foreach ($request as $key => $value) {
+
+            //instaciando classe Resposta do Model
+            $resposta= new Resposta();
+            //passando o valores para o BD
+            $resposta->id           = $request->id;
+            $resposta->users_id     = Auth::id();
+            $resposta->resposta     = $request->resposta;
+            $resposta->perguntas_id = $request->perguntas_id;
+            
+            $resposta->save();
+        }            
     }
 
     /**

@@ -19,19 +19,18 @@
   </head>
   <body>
     <div class="container">
-        <form>
-            <table>
-                @foreach($perguntas as $pergunta)
+        <form action="{{ route('form') }}" method="POST">
+          @csrf
+              @foreach($perguntas as $pergunta)
                     <div class="form-group">
                        <label for="exampleFormControlInput1">
                           {{$pergunta->titulo}}
                        </label>
-                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=""> 
+                       <input type="text" name="pergunta_{{ $pergunta->id }}" class="form-control" id="exampleFormControlInput1" placeholder=""> 
                     </div>
-              @endforeach       
-           </table>
-        </form>
+              @endforeach
         <button type="submit" class="btn btn-primary">Enviar Formulário</button>
+        </form>
     </div>
   </body>
 </html>
