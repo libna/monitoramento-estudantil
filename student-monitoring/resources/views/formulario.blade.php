@@ -58,6 +58,10 @@
     <label for="exampleFormControlTextarea1">Quais eram suas disciplinas favoritas no ensino médio?</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
+        <div class="form-group">
+    <label for="exampleFormControlTextarea1">Quais matérias você tinha mais dificuldades no ensino médio?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Você veio de escola pública ou privada?</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -78,6 +82,25 @@
     <label for="exampleFormControlTextarea1">Como você se vê daqui a um ano e seis meses?</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
+    <div class="form-group">
+    <label for="exampleFormControlTextarea1">Como você se vê daqui a um ano e seis meses?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+      <div class="form-group">
+    <label for="exampleFormControlTextarea1">Você pretende continuar na área assim que terminar esse curso?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+      <div class="form-group">
+    <label for="exampleFormControlTextarea1">Qual foi sua trajetória até chegar no campus Igarassu?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+        <div class="form-group">
+    <label for="exampleFormControlTextarea1">Como você ficou sabendo sobre o campus?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+
+
 </form>
 <button type="submit" class="btn btn-primary">Enviar Formulário</button>
 </div>
