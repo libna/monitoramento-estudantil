@@ -72,12 +72,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a class="btn btn-outline-success" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-outline-success" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="btn btn-outline-success" href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -97,33 +97,33 @@
                     <a href="https://forge.laravel.com">Notícias</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a> -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand btn btn-link" href="#">Menu Principal</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                      <a class="navbar-brand btn btn-link" href="#">Menu Principal</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link btn btn-danger mr-2" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link btn btn-warning mr-2" href="#">Formulário <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle btn btn-success mr-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link btn btn-outline-success mr-2" href="#">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item active">
+                                <a class="nav-link btn btn-outline-success mr-2" href="#">Formulário <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle btn btn-outline-success mr-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  IFPE
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
