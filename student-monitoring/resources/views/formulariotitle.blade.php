@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 		<style>
 			body{
-				background-color: #fff;
+        background-color: #fff;
+			
 			}
 			.container{
 				margin-top: 20px;
@@ -21,8 +22,8 @@
   <div class="container">
 	<form>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Coloque o Título do seu Fomulário:</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1">
+    <h2 for="exampleFormControlInput1">Coloque o Título do seu Fomulário:</h2>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="example: Informações do Aluno">
   </div>
 </form>
 <button type="submit" class="btn btn-primary">Enviar Título</button>
