@@ -43,18 +43,24 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        foreach ($request as $key => $value) {
+        
 
+        $perguntasDoForm = Pergunta::all();
+
+        foreach($perguntasDoForm as $pergunta) {
+
+            $pergunta_id = $pergunta->id;
             //instaciando classe Resposta do Model
-            $resposta= new Resposta();
+            $resposta = new Resposta();
             //passando o valores para o BD
-            $resposta->id           = $request->id;
+            
             $resposta->users_id     = Auth::id();
-            $resposta->resposta     = $request->resposta;
-            $resposta->perguntas_id = $request->perguntas_id;
+            $resposta->respostas    = $request->get('pergunta_' . $pergunta_id);
+            $resposta->perguntas_id = $pergunta_id;
             
             $resposta->save();
-        }            
+        }
+                    
     }
 
     /**
