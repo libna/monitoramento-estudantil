@@ -60,7 +60,7 @@ class FormController extends Controller
             
             $resposta->save();
         }
-                    
+           return "produtos cadastrados";         
     }
 
     /**
