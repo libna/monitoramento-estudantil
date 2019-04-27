@@ -9,6 +9,7 @@ class PerguntasSeeder extends Seeder
      *
      * @return void
      */
+     //****Perguntas de formulário de entrada**
     public function run()
     {
     	DB::table('perguntas')->insert(

@@ -15,5 +15,9 @@ class FormulariosSeeder extends Seeder
         		'id'=> 1,
         		'titulo'=> 'Formulário de Entrada'
         	]);
+            DB::table('formularios')->insert([
+                'id'=> 2,
+                'titulo'=> 'Formulário de Saída'
+            ]);
         }
     }
