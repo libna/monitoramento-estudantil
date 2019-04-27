@@ -14,10 +14,14 @@
       .container{
         margin-top: 20px;
       }
+      h1{
+        text-align: center;
+      }
     </style>  
-    <title>Questionário #1</title>
+    <title>Questionário #2</title>
   </head>
   <body>
+  <h1>Formulário para alunos egressos.</h1>
   <div class="container">
   <form>
   <div class="form-group">
@@ -88,6 +92,10 @@
   </div>
     <div class="form-group">
     <label for="exampleFormControlTextarea1">Você está cursando algum outro curso aqui no campus Igarassu?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Quais perguntas você acha que devemos adicionar no formulário?</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 </form>
