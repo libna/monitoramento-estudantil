@@ -3,27 +3,36 @@
 @section('content')
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-header">Teste</div>
-              <div class="card-body">
-                <div class="container">
-                  <form action="{{ route('form') }}" method="POST">
-                    @csrf
-                      @foreach($perguntas as $pergunta)
-                        <div class="form-group">
-                          <label for="exampleFormControlInput1">
-                            {{$pergunta->titulo}}
-                          </label>
-                            <input type="text" name="pergunta_{{ $pergunta->id }}" class="form-control" id="exampleFormControlInput1" placeholder=""> 
-                        </div>
-                      @endforeach
-                    <button type="submit" class="btn btn-primary">Enviar Formulário</button>
-                  </form>
+       
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">Formulário de Saída</div>
+              <img src="{{asset('img/ben.jpg')}}" alt="" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
-              </div>
           </div>
-        </div>
+
+            <div class="card" style="width: 18rem;">
+              <div class="card-header">Formulário de Saída</div>
+                <img src="{{asset('img/ben.jpg')}}" alt="" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+
+
+
+            <div class="card" style="width: 18rem;">
+              <div class="card-header">Formulário de Saída</div>
+                <img src="{{asset('img/ben.jpg')}}" alt="" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
       </div>
     </div>  
 @endsection
