@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pergunta;
 
 class FormexitController extends Controller
 {
@@ -13,8 +14,8 @@ class FormexitController extends Controller
      */
     public function index()
     {
-        $perguntas = Pergunta::all();
-        return view('formularioexit',compact('perguntas')); 
+        $perguntasSaida = Pergunta::all();
+        return view('formularioexit',compact('perguntasSaida')); 
     }
 
     /**

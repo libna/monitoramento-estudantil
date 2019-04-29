@@ -123,7 +123,7 @@ class PerguntasSeeder extends Seeder
         DB::table('perguntas')->insert(
             [
                 'id'                 => 17,
-                'titulo'             => 'nome completo',
+                'titulo'             => 'noaaaa',
                 'form_id'            => 2,
                 'tipo_de_pergunta_id'=> 1
 
