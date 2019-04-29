@@ -13,7 +13,8 @@ class FormexitController extends Controller
      */
     public function index()
     {
-        return view('formularioexit');
+        $perguntas = Pergunta::all();
+        return view('formularioexit',compact('perguntas')); 
     }
 
     /**
