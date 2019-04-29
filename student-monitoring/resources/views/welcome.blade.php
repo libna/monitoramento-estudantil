@@ -52,7 +52,7 @@
                 font-size: 84px;
             }
 
-            .links > a {
+/*            .links > a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
@@ -61,7 +61,7 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
+*/
             .m-b-md {
                 margin-bottom: 30px;
             }
