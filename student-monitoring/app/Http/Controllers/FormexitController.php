@@ -12,8 +12,8 @@ class FormexitController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+     public function index()
+     {
         $perguntasSaida = Pergunta::where('form_id',2)->get();
         return view('formularioexit',compact('perguntasSaida')); 
     }
@@ -35,16 +35,23 @@ class FormexitController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-          'form_pergunta'=>'required'
-          ]);
-        $form = new Formulario([
-          'pergunta' => $request->get('form_pergunta'),
-          'resposta' => ''
-          ]);
-        $form->save();
-        return redirect(route('form.index'))->with('success', 'Stock has been added');
-    }
+        $perguntasDoForm = Pergunta::where('form_id',2)->get();;
+
+        foreach($perguntasDoForm as $pergunta) {
+
+            $pergunta_id = $pergunta->id;
+            //instaciando classe Resposta do Model
+            $resposta = new Resposta();
+            //passando o valores para o BD
+
+            $resposta->users_id     = Auth::id();
+            $resposta->respostas    = $request->get('saida_' . $pergunta_id);
+            $resposta->perguntas_id = $pergunta_id;
+
+            $resposta->save();
+        }
+    return "Dados cadastrados.";
+}
 
     /**
      * Display the specified resource.

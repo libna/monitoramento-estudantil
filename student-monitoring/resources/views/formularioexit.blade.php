@@ -23,7 +23,7 @@
 <body>
   <h1>Formulário para alunos egressos.</h1>
   <div class="container">
-  <form>
+  <form action="{{ route('formexit') }}" method="POST">
     @csrf
      @foreach($perguntasSaida as $saida)
           <div class="form-group">
@@ -33,8 +33,8 @@
                 <input type="text" name="saida_{{ $saida->id }}" class="form-control" id="exampleFormControlInput1" placeholder=""> 
           </div>
      @endforeach   
-  </form>
   <button type="submit" class="btn btn-primary">Enviar Formulário</button>
+  </form>
   </div>
 
     <!-- Optional JavaScript -->
