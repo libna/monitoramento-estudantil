@@ -45,7 +45,7 @@ class FormController extends Controller
     {
         
 
-        $perguntasDoForm = Pergunta::all();
+        $perguntasDoForm = Pergunta::where("form_id",1)->get();
 
         foreach($perguntasDoForm as $pergunta) {
 
