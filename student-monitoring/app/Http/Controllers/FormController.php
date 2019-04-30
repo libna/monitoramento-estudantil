@@ -21,7 +21,7 @@ class FormController extends Controller
     // }
     public function index()
     {
-        $perguntas = Pergunta::all();
+        $perguntas = Pergunta::where('form_id',1)->get();
 
         return view('formulario', compact('perguntas'));
     }

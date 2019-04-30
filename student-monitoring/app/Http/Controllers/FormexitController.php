@@ -14,7 +14,7 @@ class FormexitController extends Controller
      */
     public function index()
     {
-        $perguntasSaida = Pergunta::all();
+        $perguntasSaida = Pergunta::where('form_id',2)->get();
         return view('formularioexit',compact('perguntasSaida')); 
     }
 
