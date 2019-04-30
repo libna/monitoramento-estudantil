@@ -25,7 +25,7 @@ Route::get('/form', 'FormController@index');
 Route::resource('form', 'FormController');
 
 Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
-Route::post('/formexit/save','FormController@store')->name('formexit');
+Route::post('/formexit/save','FormexitController@store')->name('formexit');
 
 Route::get('/formulariotitle', ['as' => 'formulariotitle', 'uses' => 'FormtitleController@index']);
 

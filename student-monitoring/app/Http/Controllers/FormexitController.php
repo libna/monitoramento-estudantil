@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Pergunta;
+use App\Resposta;
+use App\Formulario;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class FormexitController extends Controller
 {
@@ -35,7 +39,7 @@ class FormexitController extends Controller
      */
     public function store(Request $request)
     {
-        $perguntasDoForm = Pergunta::where('form_id',2)->get();;
+        $perguntasDoForm = Pergunta::where('form_id',2)->get();
 
         foreach($perguntasDoForm as $pergunta) {
 
