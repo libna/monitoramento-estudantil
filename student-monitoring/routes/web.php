@@ -17,21 +17,24 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//HomeController
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('/form', 'FormController@index');
-
-
+//FormControler
 Route::resource('/form', 'FormController', ['as' => 'form', 'uses' => 'FormController@index']);
+Route::post('form/save', 'FormController@store')->name('form');
 
+//Formexit
 Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
 Route::post('/formexit/save','FormexitController@store')->name('formexit');
 
+//FormTitleController
 Route::get('/formulariotitle', ['as' => 'formulariotitle', 'uses' => 'FormtitleController@index']);
 
+//???
 Route::get('/index', function(){
 	return view ('home2');
 });
 
-Route::post('form/save', 'FormController@store')->name('form');
-
+//RespostaController
+Route::get('/resposta','RespostaController@index')->name('resposta');
