@@ -1,44 +1,32 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <style>
-      body{
-        background-color: #fff;
-      }
-      .container{
-        margin-top: 20px;
-      }
-      h1{
-        text-align: center;
-      }
-    </style>  
-    <title>Questionário #2</title>
-</head>
-<body>
-  <h1>Formulário para alunos egressos.</h1>
-  <div class="container">
-  <form action="{{ route('formexit') }}" method="POST">
-    @csrf
-     @foreach($perguntasSaida as $saida)
-          <div class="form-group">
-              <label for="exampleFormControlInput1">
-                  {{$saida->titulo}}
-              </label>
-                <input type="text" name="saida_{{ $saida->id }}" class="form-control" id="exampleFormControlInput1" placeholder=""> 
-          </div>
-     @endforeach   
-  <button type="submit" class="btn btn-primary">Enviar Formulário</button>
-  </form>
-  </div>
+@extends('layouts.app')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{asset('js/app.js')}}" type="text/JavaScript"></script>
-</body>
-</html>
+@section('content')
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">Formulário para Alunos Egressos</div>
+              <div class="card-body">
+                <div class="container">
+                  <form action="{{ route('formexit') }}" method="POST">
+                    @csrf
+                       @foreach($perguntasSaida as $saida)
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">
+                              {{$saida->titulo}}
+                          </label>
+                            <input type="text" name="saida_{{ $saida->id }}" class="form-control" id="exampleFormControlInput1" placeholder=""> 
+                        </div>
+                       @endforeach   
+                    <button type="submit" class="btn btn-primary">Enviar Formulário</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+@endsection
+
+
+

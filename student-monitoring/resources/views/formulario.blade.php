@@ -5,7 +5,7 @@
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="card">
-            <div class="card-header">Formulário para alunos  recém-chegados</div>
+            <div class="card-header">Formulário para Alunos Recém-Chegados</div>
               <div class="card-body">
                 <div class="container">
                   <form action="{{ route('form') }}" method="POST">
