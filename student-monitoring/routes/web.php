@@ -19,10 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/form', 'FormController@index');
+//Route::get('/form', 'FormController@index');
 
 
-Route::resource('form', 'FormController');
+Route::resource('/form', 'FormController', ['as' => 'form', 'uses' => 'FormController@index']);
 
 Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
 Route::post('/formexit/save','FormexitController@store')->name('formexit');
@@ -33,5 +33,5 @@ Route::get('/index', function(){
 	return view ('home2');
 });
 
-Route::post('/form/save', 'FormController@store')->name('form');
+Route::post('form/save', 'FormController@store')->name('form');
 
