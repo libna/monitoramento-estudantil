@@ -60,7 +60,9 @@ class FormController extends Controller
             
             $resposta->save();
         }
-           return "Dados cadastrados.";         
+          $respostasform = Resposta::all();   
+           return $respostasform;
+
     }
 
     /**
