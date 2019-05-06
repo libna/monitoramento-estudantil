@@ -8,9 +8,16 @@
             <div class="card-header"></div>
               <div class="card-body">
                 <div class="container">
-                  @foreach($respostasform as $resposta)
-                    {{$resposta->respostas}}-{{$resposta->perguntas_id}}-{{$resposta->users_id}}
-                  @endforeach
+                  <table>
+                    <th>RESPOSTA</th><th>ID_PERGUNTA</th><th>ID_USUARIO</th>
+                    @foreach($respostasform as $resposta)
+                    <tr>
+                      <td>{{$resposta->respostas}}</td>
+                      <td>{{$resposta->perguntas_id}}</td>
+                      <td>{{$resposta->users_id}}</td>
+                    </tr>
+                    @endforeach
+                  </table>
                 </div>
               </div>
           </div>
