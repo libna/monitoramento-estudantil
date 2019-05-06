@@ -17,6 +17,24 @@ class UsersSeeder extends Seeder
         		'matricula' => '20181infig0166',
         		'email'		=> 'libnarodrigues723@gmail.com',
         		'password'	=> 'libna123'
+
         	]);
+
+               DB::table('users')->insert([
+                'id'        => 2,
+                'name'      => 'Geovane',
+                'matricula' => '20181infig0337',
+                'email'     => 'geovanejose240899@gmail.com',
+                'password'  => 'geovane123'
+                 ]);   
+
+
+               DB::table('users')->insert([
+                'id'        => 3,
+                'name'      => 'Wolaci',
+                'matricula' => '20181infig0077',
+                'email'     => 'wolacijose8@gmail.com',
+                'password'  => 'wolaci123'
+                 ]);   
     }
 }
