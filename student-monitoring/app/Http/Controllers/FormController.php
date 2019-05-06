@@ -61,7 +61,7 @@ class FormController extends Controller
             $resposta->save();
         }
           $respostasform = Resposta::all();   
-           return $respostasform;
+           return view('respostas',compact('respostasform'));
 
     }
 
