@@ -22,11 +22,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //FormControler
 Route::resource('/form', 'FormController', ['as' => 'form', 'uses' => 'FormController@index']);
+
+
+
 Route::post('form/save', 'FormController@store')->name('form');
 
-//Formexit
+//Formexit -> Index
 Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
-Route::post('/formexit/save','FormexitController@store')->name('formexit');
+//Formexit -> Index
+Route::post('/formexit/save','FormexitController@store')->name('formExitStore');
+
+
 
 //FormTitleController
 Route::get('/formulariotitle', ['as' => 'formulariotitle', 'uses' => 'FormtitleController@index']);
