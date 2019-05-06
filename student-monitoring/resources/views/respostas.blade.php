@@ -8,7 +8,9 @@
             <div class="card-header"></div>
               <div class="card-body">
                 <div class="container">
-                  {{$respostasform}}
+                  @foreach($respostasform as $resposta)
+                    {{$resposta->respostas}}-{{$resposta->perguntas_id}}-{{$resposta->users_id}}
+                  @endforeach
                 </div>
               </div>
           </div>
