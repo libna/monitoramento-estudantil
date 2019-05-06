@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
         		'name'		=> 'Libna',
         		'matricula' => '20181infig0166',
         		'email'		=> 'libnarodrigues723@gmail.com',
-        		'password'	=> 'libna123'
+        		'password'	=> md5('libna123')
 
         	]);
 
@@ -25,7 +25,7 @@ class UsersSeeder extends Seeder
                 'name'      => 'Geovane',
                 'matricula' => '20181infig0337',
                 'email'     => 'geovanejose240899@gmail.com',
-                'password'  => 'geovane123'
+                'password'  => md5('geovane123')
                  ]);   
 
 
@@ -34,7 +34,7 @@ class UsersSeeder extends Seeder
                 'name'      => 'Wolaci',
                 'matricula' => '20181infig0077',
                 'email'     => 'wolacijose8@gmail.com',
-                'password'  => 'wolaci123'
+                'password'  => md5('wolaci123')
                  ]);   
     }
 }

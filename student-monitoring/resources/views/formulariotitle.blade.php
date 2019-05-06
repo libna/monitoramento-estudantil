@@ -25,8 +25,8 @@
     <h2 for="exampleFormControlInput1">Coloque o Título do seu Fomulário:</h2>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="example: Informações do Aluno">
   </div>
-</form>
 <button type="submit" class="btn btn-primary">Enviar Título</button>
+</form>
 </div>
 
     <!-- Optional JavaScript -->
