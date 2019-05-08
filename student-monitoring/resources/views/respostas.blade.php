@@ -19,25 +19,23 @@
                     @endforeach
                   </table> -->
                   <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">RESPOSTA</th>
-      <th scope="col">ID_PERGUNTA</th>
-      <th scope="col">ID_USUÁRIO</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($respostasform as $resposta)
-    <tr>
-      <td>{{$resposta->respostas}}</td>
-      <td>{{$resposta->perguntas_id}}</td>
-      <td>{{$resposta->users_id}}</td>
-
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">RESPOSTA</th>
+                        <th scope="col">ID_PERGUNTA</th>
+                        <th scope="col">ID_USUÁRIO</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @foreach($respostasform as $resposta)
+                      <tr>
+                        <td>{{$resposta->respostas}}</td>
+                        <td>{{$resposta->perguntas_id}}</td>
+                        <td>{{$resposta->users_id}}</td>
+                      </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
                 </div>
               </div>
           </div>

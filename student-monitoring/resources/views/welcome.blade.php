@@ -16,7 +16,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+                /*background-color: #fff;*/
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -39,9 +40,10 @@
             }
 
             .top-right {
-                position: absolute;
+                position: absolute; 
                 right: 10px;
-                top: 18px;
+                top: 18px; 
+                /*top: 70px;*/
             }
 
             .content {

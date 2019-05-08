@@ -6,7 +6,7 @@
        
           <div class="card" style="width: 18rem;">
             <div class="card-header">Formulário de Saída</div>
-              <img src="{{asset('img/ben.jpg')}}" alt="" class="card-img-top">
+              <img src="{{asset('img/form-icon-2.png')}}" alt="Ícone de Formulário" class="card-img-top" style="padding: 10px;">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="{{route('formexit')}}" class="btn btn-primary">Go somewhere</a>
@@ -17,7 +17,7 @@
 
             <div class="card" style="width: 18rem;">
               <div class="card-header">Formulário de Saída</div>
-                <img src="{{asset('img/ben.jpg')}}" alt="" class="card-img-top">
+                <img src="{{asset('img/form-icon-2.png')}}" alt="" class="card-img-top" style="padding: 10px;">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -29,7 +29,7 @@
 
             <div class="card" style="width: 18rem;">
               <div class="card-header">Formulário de Saída</div>
-                <img src="{{asset('img/ben.jpg')}}" alt="" class="card-img-top">
+                <img src="{{asset('img/form-icon-2.png')}}" alt="" class="card-img-top" style="padding: 10px;">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="btn btn-primary">Go somewhere</a>
