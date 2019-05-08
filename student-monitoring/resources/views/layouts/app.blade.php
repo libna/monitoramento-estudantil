@@ -18,10 +18,20 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<!--     <style>
+        html, body{
+            min-height: 100%;
+        }
+        body, #nav-login{
+            background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style> -->
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav id="nav-login" class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->

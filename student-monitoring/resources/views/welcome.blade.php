@@ -16,8 +16,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-                /*background-color: #fff;*/
+                /*background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);*/
+                background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -54,7 +54,7 @@
                 font-size: 84px;
             }
 
-/*            .links > a {
+            /*.links > a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
@@ -62,8 +62,8 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
-*/
+            }*/
+
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -109,7 +109,7 @@
                                 <a class="nav-link btn btn-outline-success mr-2" href="#">Novidades<span class="sr-only">(current)</span></a>
                               </li>
                                 <li class="nav-item active">
-                                <a class="nav-link btn btn-outline-success mr-2" href="#">IFPE<span class="sr-only">(current)</span></a>
+                                <a class="nav-link btn btn-outline-success mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE<span class="sr-only">(current)</span></a>
                               </li>
                             </ul>
                         </div>
