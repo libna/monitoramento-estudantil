@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
         		'name'		=> 'Libna',
         		'matricula' => '20181infig0166',
         		'email'		=> 'libnarodrigues723@gmail.com',
-        		'password'	=> md5('libna123')
+        		'password'	=> 'libna123'
 
         	]);
 

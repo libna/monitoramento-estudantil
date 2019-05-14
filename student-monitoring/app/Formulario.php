@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Formulario extends Model
 {
-	protected $table = 'formulario';
+	protected $table = 'formularios';
   protected $fillable = [
     'pergunta', 'resposta'
   ];
