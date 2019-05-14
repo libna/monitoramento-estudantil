@@ -35,7 +35,8 @@ Route::post('/formexit/save','FormexitController@store')->name('formExitStore');
 
 
 //FormTitleController
-Route::get('/formulariotitle', ['as' => 'formulariotitle', 'uses' => 'FormtitleController@index']);
+Route::get('/formulariotitle', 'FormtitleController@index')->name('criarform');
+Route::post('/formulariotitle/save', 'FormtitleController@store')->name('salvarform');
 
 //???
 Route::get('/index', function(){

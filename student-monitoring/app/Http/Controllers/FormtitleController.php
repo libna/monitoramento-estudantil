@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Formulario;
 
 class FormtitleController extends Controller
 {
@@ -36,15 +37,10 @@ class FormtitleController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-          'form_pergunta'=>'required'
-          ]);
-        $form = new Formulario([
-          'pergunta' => $request->get('form_pergunta'),
-          'resposta' => ''
-          ]);
+        $form = new Formulario();
+        $form->titulo = $request->nameForm;
         $form->save();
-        return redirect(route('form.index'))->with('success', 'Stock has been added');
+        echo "oi";
     }
 
     /**

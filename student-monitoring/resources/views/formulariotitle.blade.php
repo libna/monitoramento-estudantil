@@ -20,10 +20,11 @@
   </head>
   <body>
   <div class="container">
-	<form>
+	<form method="POST" action="{{ route('salvarform') }}">
+    @csrf
   <div class="form-group">
     <h2 for="exampleFormControlInput1">Coloque o Título do seu Fomulário:</h2>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="example: Informações do Aluno">
+    <input type="text" name="nameForm" class="form-control" id="exampleFormControlInput1" placeholder="example: Informações do Aluno">
   </div>
 <button type="submit" class="btn btn-primary">Enviar Título</button>
 </form>
