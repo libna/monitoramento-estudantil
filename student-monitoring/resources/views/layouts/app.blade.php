@@ -32,7 +32,7 @@
 <body>
     <div id="app">
         <nav id="nav-login" class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
+            <div class="container mt-5">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
                     <img src="{{asset('img/logos.png')}}" alt="Logo da Página" style="width: 100%">
@@ -87,13 +87,13 @@
             @yield('content')
         </main>
         <div class="links">
-            <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
-              <a class="navbar-brand btn btn-link" href="#">Monitoramento Estudantil</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand btn btn-link" href="#">Menu Principal</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse" id="navbar2">
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
                         <a class="nav-link btn btn-outline-success mr-2" href="#">Home <span class="sr-only">(current)</span></a>
@@ -112,5 +112,10 @@
             </nav>
         </div>
     </div>
+        <nav class="fixed-bottom bg-dark text-light">
+            <div class=" text-center py-4">© 2019 Copyright
+                <a style="text-decoration: none;" href="#">Monitoramento Estudantil</a>
+            </div>
+        </nav>      
 </body>
 </html>

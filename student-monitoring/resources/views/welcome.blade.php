@@ -43,7 +43,7 @@
                 position: absolute; 
                 right: 10px;
                 top: 18px; 
-                /*top: 70px;*/
+                top: 70px; ///
             }
 
             .content {
@@ -91,8 +91,8 @@
                 </div>
 
                 <div class="links">
-                    <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
-                      <a class="navbar-brand btn btn-link" href="#">Monitoramento Estudantil</a>
+                    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+                      <a class="navbar-brand btn btn-link" href="#">Menu Principal</a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -117,6 +117,11 @@
                 </div>
             </div>
         </div>
+            <nav class="fixed-bottom bg-dark text-light">
+                <div class=" text-center py-4">© 2019 Copyright
+                    <a style="text-decoration: none;" href="#">Monitoramento Estudantil</a>
+                </div>
+            </nav> 
         <script src="{{asset('js/app.js')}}" type="text/JavaScript"></script>
     </body>
     </html>
