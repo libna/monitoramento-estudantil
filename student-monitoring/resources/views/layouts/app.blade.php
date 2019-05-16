@@ -113,9 +113,7 @@
         </div>
     </div>
         <nav class="fixed-bottom bg-dark text-light">
-            <div class=" text-center py-4">© 2019 Copyright
-                <a style="text-decoration: none;" href="#">Monitoramento Estudantil</a>
-            </div>
+            <div class="text-center py-3">Monitoramento Estudantil © 2019</div>
         </nav>      
 </body>
 </html>

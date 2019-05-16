@@ -20,7 +20,7 @@
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                /*font-weight: 200;*/
                 height: 100vh;
                 margin: 0;
             }
@@ -118,9 +118,7 @@
             </div>
         </div>
             <nav class="fixed-bottom bg-dark text-light">
-                <div class=" text-center py-4">© 2019 Copyright
-                    <a style="text-decoration: none;" href="#">Monitoramento Estudantil</a>
-                </div>
+                <div class="text-center py-3">Monitoramento Estudantil © 2019</div>
             </nav> 
         <script src="{{asset('js/app.js')}}" type="text/JavaScript"></script>
     </body>
