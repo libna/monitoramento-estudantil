@@ -19,9 +19,9 @@ class FormController extends Controller
     public function __construct(){
         $this->middleware('auth');
     }
-    public function index()
+    public function index($id)
     {
-        $perguntas = Pergunta::where('form_id',1)->get();
+        $perguntas = Pergunta::where('form_id',$id)->get();
 
         return view('formulario', compact('perguntas'));
     }

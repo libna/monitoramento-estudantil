@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //FormControler
 
-Route::get('/form', 'FormController@index')->name('form');
+Route::get('/form/{id}', 'FormController@index')->name('form');
 Route::post('form/save', 'FormController@store')->name('formsave');
 
 

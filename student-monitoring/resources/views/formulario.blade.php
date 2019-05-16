@@ -8,7 +8,7 @@
             <div class="card-header">Formulário para Alunos Recém-Chegados</div>
               <div class="card-body">
                 <div class="container">
-                  <form action="{{ route('form') }}" method="POST">
+                  <form action="{{ route('formsave') }}" method="POST">
                     @csrf
                       @foreach($perguntas as $pergunta)
                         <div class="form-group">
