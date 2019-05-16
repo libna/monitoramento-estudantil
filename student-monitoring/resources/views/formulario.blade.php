@@ -10,6 +10,7 @@
                 <div class="container">
                   <form action="{{ route('formsave') }}" method="POST">
                     @csrf
+                      <input type="hidden" name="form_id" value="{{ $id }}">
                       @foreach($perguntas[0]->perguntas as $pergunta)
                         <div class="form-group">
                           <label for="exampleFormControlInput2">

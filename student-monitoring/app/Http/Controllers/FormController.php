@@ -24,7 +24,7 @@ class FormController extends Controller
         $perguntas = Formulario::with('perguntas')->where('id',$id)->get();
 
         // var_dump($perguntas[0]->perguntas);
-        return view('formulario', compact('perguntas'));
+        return view('formulario', compact('id', 'perguntas'));
     }
 
     /**
@@ -45,8 +45,7 @@ class FormController extends Controller
     public function store(Request $request)
     {
         
-
-        $perguntasDoForm = Pergunta::where("form_id",1)->get();
+        $perguntasDoForm = Pergunta::where("form_id",$request->id)->get();
 
         foreach($perguntasDoForm as $pergunta) {
 
