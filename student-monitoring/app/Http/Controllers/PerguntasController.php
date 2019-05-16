@@ -3,22 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Formulario;
-use Illuminate\Support\Facades\Auth;
+use App\Pergunta;
 
-class FormtitleController extends Controller
+class PerguntasController extends Controller
 {
-	/**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
-        $this->middleware('auth');
-    }
     public function index()
     {
-        return view('formulariotitle');
+        return view('perguntas');
     }
 
     /**
@@ -28,6 +24,7 @@ class FormtitleController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
@@ -38,11 +35,7 @@ class FormtitleController extends Controller
      */
     public function store(Request $request)
     {
-        $form = new Formulario();
-        $form->titulo   = $request->nameForm;
-        $form->users_id = Auth::id();;
-        $form->save();
-        
+        //
     }
 
     /**
@@ -89,5 +82,4 @@ class FormtitleController extends Controller
     {
         //
     }
-    //
 }

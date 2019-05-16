@@ -21,11 +21,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //FormControler
-Route::resource('/form', 'FormController', ['as' => 'form', 'uses' => 'FormController@index']);
+Route::get('/form', 'FormController@index')->name('form');
 
 
 
-Route::post('form/save', 'FormController@store')->name('form');
+Route::post('form/save', 'FormController@store')->name('formsave');
 
 //Formexit -> Index
 Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
@@ -45,3 +45,7 @@ Route::get('/index', function(){
 
 //RespostaController
 Route::get('/resposta','RespostaController@index')->name('resposta');
+
+//PerguntasController
+Route::get('/pergunta','PerguntasController@index')->name('perg');
+Route::post('/pergunta/save','PerguntasController@store')->name('pergSave');
