@@ -21,11 +21,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //FormControler
+
 Route::get('/form', 'FormController@index')->name('form');
-
-
-
 Route::post('form/save', 'FormController@store')->name('formsave');
+
 
 //Formexit -> Index
 Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
