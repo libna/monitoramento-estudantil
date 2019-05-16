@@ -21,8 +21,9 @@ class FormController extends Controller
     }
     public function index($id)
     {
-        $perguntas = Pergunta::where('form_id',$id)->get();
+        $perguntas = Formulario::with('perguntas')->where('id',$id)->get();
 
+        // var_dump($perguntas[0]->perguntas);
         return view('formulario', compact('perguntas'));
     }
 
