@@ -23,7 +23,7 @@
             min-height: 100%;
         }
         body, #nav-login{
-            background-image: linear-gradient(to top, #11998e 20%, #38ef7d 100%);
+            background-image: linear-gradient(to top, #11998e 80%, #38ef7d 100%);
             background-size: cover;
             background-repeat: no-repeat;
         }
