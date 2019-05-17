@@ -18,20 +18,20 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<!--     <style>
+     <style>
         html, body{
             min-height: 100%;
         }
         body, #nav-login{
-            background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+            background-image: linear-gradient(to top, #11998e 20%, #38ef7d 100%);
             background-size: cover;
             background-repeat: no-repeat;
         }
-    </style> -->
+    </style> 
 </head>
 <body>
     <div id="app">
-        <nav id="nav-login" class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: transparent;border:none;">
             <div class="container mt-5">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
@@ -52,11 +52,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link btn btn-outline-success mr-2" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link btn btn-outline-dark mr-2" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-outline-success mr-2" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link btn btn-outline-dark mr-2" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else

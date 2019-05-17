@@ -16,7 +16,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                /*background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);*/
+                background-image: linear-gradient(to top, #11998e 0%, #38ef7d 100%);
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -74,12 +74,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a class="btn btn-outline-success" href="{{ url('/home') }}">Home</a>
+                        <a class="btn btn-outline-dark" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a class="btn btn-outline-success" href="{{ route('login') }}">Login</a>
+                        <a class="btn btn-outline-dark" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a class="btn btn-outline-success" href="{{ route('register') }}">Register</a>
+                            <a class="btn btn-outline-dark" href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
