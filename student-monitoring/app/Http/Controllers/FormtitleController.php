@@ -42,6 +42,8 @@ class FormtitleController extends Controller
         $form->titulo   = $request->nameForm;
         $form->users_id = Auth::id();;
         $form->save();
+
+        return redirect()->route('perg');
         
     }
 
