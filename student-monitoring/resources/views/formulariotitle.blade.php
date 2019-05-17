@@ -13,8 +13,4 @@
   </form>
   </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="{{asset('js/app.js')}}" type="text/JavaScript"></script>
-
 @endsection

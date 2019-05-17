@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pergunta;
+use App\Tipo_de_pergunta;
 
 class PerguntasController extends Controller
 {
@@ -14,7 +15,8 @@ class PerguntasController extends Controller
      */
     public function index()
     {
-        return view('perguntas');
+        $tipoDePergunta = Tipo_de_pergunta::All();
+        return view('perguntas',compact('tipoDePergunta'));
     }
 
     /**
