@@ -16,7 +16,8 @@ class UsersSeeder extends Seeder
         		'name'		=> 'Libna',
         		'matricula' => '20181infig0166',
         		'email'		=> 'libnarodrigues723@gmail.com',
-        		'password'	=> 'libna123'
+        		'password'	=> 'libna123',
+                'siape'     => 'null'
 
         	]);
 
@@ -25,8 +26,9 @@ class UsersSeeder extends Seeder
                 'name'      => 'Geovane',
                 'matricula' => '20181infig0337',
                 'email'     => 'geovanejose240899@gmail.com',
-                'password'  => md5('geovane123')
-                 ]);   
+                'password'  => md5('geovane123'),
+                'siape'     => 'nudsfll'
+             ]);   
 
 
                DB::table('users')->insert([
@@ -34,7 +36,8 @@ class UsersSeeder extends Seeder
                 'name'      => 'Wolaci',
                 'matricula' => '20181infig0077',
                 'email'     => 'wolacijose8@gmail.com',
-                'password'  => md5('wolaci123')
+                'password'  => md5('wolaci123'),
+                'siape'     => 'nulsdl'
                  ]); 
 
                  DB::table('users')->insert([
@@ -42,7 +45,8 @@ class UsersSeeder extends Seeder
                 'name'      => 'Raul',
                 'matricula' => '20181infig0387',
                 'email'     => 'raulbarrosmr@gmail.com',
-                'password'  => md5('raul12345')
+                'password'  => md5('raul12345'),
+                'siape'     => 'nuldsal'
                  ]); 
 
                  DB::table('users')->insert([
@@ -50,7 +54,8 @@ class UsersSeeder extends Seeder
                 'name'      => 'José',
                 'matricula' => '20181infig0069',
                 'email'     => 'jrlima150305@gmail.com',
-                'password'  => md5('jose12345')
+                'password'  => md5('jose12345'),
+                'siape'     => 'nuladsfrl'
                  ]);   
 
                  DB::table('users')->insert([
@@ -58,7 +63,8 @@ class UsersSeeder extends Seeder
                 'name'      => 'Rebeca',
                 'matricula' => '20181infig0011',
                 'email'     => 'rebecacristina@gmail.com',
-                'password'  => md5('rebeca123')
+                'password'  => md5('rebeca123'),
+                'siape'     => 'nusadsall'
                  ]); 
     }
 }
