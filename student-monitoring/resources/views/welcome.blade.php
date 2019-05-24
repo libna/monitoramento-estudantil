@@ -16,7 +16,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: linear-gradient(to top, #11998e 0%, #38ef7d 100%);
+                /*background-image: linear-gradient(to top, #11998e 0%, #38ef7d 100%);*/
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -100,16 +100,16 @@
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                <a class="nav-link btn btn-outline-success mr-2" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link btn btn-outline-dark mr-2" href="#">Home <span class="sr-only">(current)</span></a>
                               </li>
                               <li class="nav-item active">
-                                <a class="nav-link btn btn-outline-success mr-2" href="#">Formulário<span class="sr-only">(current)</span></a>
+                                <a class="nav-link btn btn-outline-dark mr-2" href="#">Formulário<span class="sr-only">(current)</span></a>
                               </li>
                                 <li class="nav-item active">
-                                <a class="nav-link btn btn-outline-success mr-2" href="#">Novidades<span class="sr-only">(current)</span></a>
+                                <a class="nav-link btn btn-outline-dark mr-2" href="#">Novidades<span class="sr-only">(current)</span></a>
                               </li>
                                 <li class="nav-item active">
-                                <a class="nav-link btn btn-outline-success mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE<span class="sr-only">(current)</span></a>
+                                <a class="nav-link btn btn-outline-dark mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE<span class="sr-only">(current)</span></a>
                               </li>
                             </ul>
                         </div>

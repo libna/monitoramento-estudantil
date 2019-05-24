@@ -12,15 +12,15 @@
                         <div class="row">
 
                             <div class="col-4">
-                                <a href="" class="btn btn-primary btn-lg" role="button">Aluno</a>
+                                <a href="" class="btn btn-dark btn-md" role="button">Aluno</a>
                             </div>
 
                             <div class="col-4">
-                                <a href="" class="btn btn-primary btn-lg" role="button">Egresso</a>
+                                <a href="" class="btn btn-dark btn-md" role="button">Egresso</a>
                             </div>
 
                             <div class="col-4">
-                                <a href="" class="btn btn-primary btn-lg" role="button">Professor</a>
+                                <a href="" class="btn btn-dark btn-md" role="button">Professor</a>
                             </div>
 
                         </div>

@@ -23,9 +23,13 @@
             min-height: 100%;
         }
         body, #nav-login{
-            background-image: linear-gradient(to top, #11998e 80%, #38ef7d 100%);
+            /*background-image: linear-gradient(to top, #11998e 80%, #38ef7d 100%);*/
             background-size: cover;
             background-repeat: no-repeat;
+        }
+
+        #botoes a:hover{
+            color: white;
         }
     </style> 
 </head>
@@ -48,7 +52,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" id="botoes">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -96,16 +100,16 @@
               <div class="collapse navbar-collapse" id="navbar2">
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
-                        <a class="nav-link btn btn-outline-success mr-2" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link btn btn-outline-dark mr-2" href="#">Home <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link btn btn-outline-success mr-2" href="#">Formulário<span class="sr-only">(current)</span></a>
+                        <a class="nav-link btn btn-outline-dark mr-2" href="#">Formulário<span class="sr-only">(current)</span></a>
                       </li>
                         <li class="nav-item active">
-                        <a class="nav-link btn btn-outline-success mr-2" href="#">Novidades<span class="sr-only">(current)</span></a>
+                        <a class="nav-link btn btn-outline-dark mr-2" href="#">Novidades<span class="sr-only">(current)</span></a>
                       </li>
                         <li class="nav-item active">
-                        <a class="nav-link btn btn-outline-success mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE<span class="sr-only">(current)</span></a>
+                        <a class="nav-link btn btn-outline-dark mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE<span class="sr-only">(current)</span></a>
                       </li>
                     </ul>
                 </div>
