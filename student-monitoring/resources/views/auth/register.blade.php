@@ -9,21 +9,15 @@
 
                 <div class="card-body">
                     <div class="container">
-                        <div class="row">
+                        <!-- <div class="row"> -->
 
-                            <div class="col-4">
-                                <a href="" class="btn btn-dark btn-md" role="button">Aluno</a>
+                            <div class=" btn-group-lg nav justify-content-center" role="group" aria-label="Basic example">
+                                <a href="" class="btn btn-dark m-2" role="button">Aluno</a>
+                                <a href="" class="btn btn-dark m-2" role="button">Egresso</a> 
+                                <a href="" class="btn btn-dark m-2" role="button">Professor</a>
                             </div>
 
-                            <div class="col-4">
-                                <a href="" class="btn btn-dark btn-md" role="button">Egresso</a>
-                            </div>
-
-                            <div class="col-4">
-                                <a href="" class="btn btn-dark btn-md" role="button">Professor</a>
-                            </div>
-
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
