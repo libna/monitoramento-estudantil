@@ -10,11 +10,11 @@
                 <div class="card-body">
                     <div class="container">
                         
-
+                    <!-- Começo de elementos para registro -->
                             <div class=" btn-group-lg nav justify-content-center" role="group" aria-label="Basic example">
                                 <a href="#" onclick="aluno()" id="alunos" class="btn btn-dark m-2" role="button">Aluno</a>
-                                <a href="#" onclick="egresso()" class="btn btn-dark m-2" role="button">Egresso</a> 
                                 <a href="#" onclick="prof()" class="btn btn-dark m-2" role="button">Professor</a>
+                                <a href="#" onclick="egresso()" class="btn btn-dark m-2" role="button">Egresso</a> 
                             </div>
                             
                             <div class="d-none" id="aluno" >
@@ -95,6 +95,10 @@
                                     </form>
                                 </div>
                             </div>
+
+
+
+                            
                                   
                             
                              <div class="d-none" id="egresso" >
@@ -176,6 +180,11 @@
                                 </div>
                             </div>
 
+
+
+
+
+
                              <div class="d-none" id="professor">
                                 <div class="card-body">
                                     <form method="POST" action="{{ route('register') }}">
@@ -254,6 +263,10 @@
                                     </form>
                                 </div>
                             </div>
+
+
+
+                        <!-- Fim de elementos para registro -->
                     </div>
                 </div>
             </div>
