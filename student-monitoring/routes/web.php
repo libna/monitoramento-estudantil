@@ -16,7 +16,17 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::post('/register_prof', 'Auth\RegisterController@create_prof')->name('register_prof');
+Route::post('/register_student', 'Auth\RegisterController@create_student')->name('register_student');
 
+
+Route::get('/aluno', function(){
+	return view('aluno') ;
+});
+
+Route::get('/professor', function(){
+	return view('professor');
+});
 //HomeController
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -27,9 +37,9 @@ Route::post('/form/save', 'FormController@store')->name('formsave');
 
 
 //Formexit -> Index
-Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
+// Route::get('/formexit', ['as' => 'formexit', 'uses' => 'FormexitController@index']);
 //Formexit -> Index
-Route::post('/formexit/save','FormexitController@store')->name('formExitStore');
+// Route::post('/formexit/save','FormexitController@store')->name('formExitStore');
 
 
 

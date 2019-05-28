@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -46,14 +47,19 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator(array $data)      
     {
-        return Validator::make($data, [
+        $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'matricula' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+        $validator->setAttributeNames([
+            'email' => 'email_prof'
+        ]);
+
+        return $validator;
     }
 
     /**
@@ -62,13 +68,22 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create_prof(Request $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'matricula' => $data['matricula'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'name'     => $data['name_prof'],
+            'siape'    => $data['siape_prof'],
+            'email'    => $data['email_prof'],
+            'password' => Hash::make($data['password_prof']),
+        ]);
+    }
+     protected function create_student(Request $data)
+    {
+        return User::create([
+            'name'      => $data['name_aluno'],
+            'matricula' => $data['matricula_aluno'],
+            'email'     => $data['email_aluno'],
+            'password'  => Hash::make($data['password_aluno']),
         ]);
     }
 }
