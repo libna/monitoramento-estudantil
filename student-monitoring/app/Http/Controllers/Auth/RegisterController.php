@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -51,7 +53,7 @@ class RegisterController extends Controller
     {
         $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'matricula' => ['required', 'string', 'max:255'],
+            'matricula' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -79,11 +81,14 @@ class RegisterController extends Controller
     }
      protected function create_student(Request $data)
     {
-        return User::create([
+        $user = User::create([
             'name'      => $data['name_aluno'],
             'matricula' => $data['matricula_aluno'],
             'email'     => $data['email_aluno'],
             'password'  => Hash::make($data['password_aluno']),
         ]);
+        Auth::loginUsingId($user->id);
+        return response('created', 200)
+                  ->header('Content-Type', 'text/plain');
     }
 }

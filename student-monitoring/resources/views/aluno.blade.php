@@ -10,7 +10,7 @@
 	                    <div class="container">                        
                             <div class="" id="aluno" >
                                 <div class="card-body">
-                                    <form method="POST" action="{{ route('register_student') }}">
+                                    <form method="POST" action="{{ route('register_student') }}" id="cadUsuario" >
                                         @csrf
                                         <div class="form-group row">
                                             <label for="matricula" class="col-md-4 col-form-label text-md-right">{{ __('Matrícula') }}</label>
@@ -78,7 +78,7 @@
 
                                         <div class="form-group row mb-0">
                                             <div class="col-md-6 offset-md-4">
-                                                <button type="submit" class="btn btn-success">
+                                                <button type="submit" class="btn btn-success" id="salvar" >
                                                     {{ __('Fazer registro') }}
                                                 </button>
                                                 <a href="{{asset('register')}}" class="ml-3" role="button">Voltar</a>
@@ -93,4 +93,23 @@
 	        </div>
 	    </div>
 	</div>
+    <script type="text/javascript">
+        $('#cadUsuario').on('submit', function(evt) {
+            evt.preventDefault();
+            
+            var dados = $('#cadUsuario').serialize();
+
+            $.ajax({
+                type: 'POST',
+                // dataType: 'json',
+                url:'{{ route("register_student") }}',
+                async: true,
+                data: dados,
+                success: function (response) {
+                   window.location.replace("{{route('home')}}");
+                }
+
+            });
+        });
+    </script>
 @endsection
