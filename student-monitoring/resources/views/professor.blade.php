@@ -10,17 +10,17 @@
 	                    <div class="container">
 	                    	<div class="" id="professor">
 	                            <div class="card-body">
-                                    <form method="POST" action="{{ route('register_prof') }}">
+                                    <form method="POST" action="{{ route('register_prof') }}"  id="cadUsuario" >
                                         @csrf
                                         <div class="form-group row">
                                             <label for="siape" class="col-md-4 col-form-label text-md-right">{{ __('SIAPE') }}</label>
 
                                             <div class="col-md-6">
-                                                <input id="siape" type="text" class="form-control{{ $errors->has('siape_aluno') ? ' is-invalid' : '' }}" name="siape_aluno" value="{{ old('siape_aluno') }}" required autofocus>
+                                                <input id="siape" type="text" class="form-control{{ $errors->has('siape_prof') ? ' is-invalid' : '' }}" name="siape_prof" value="{{ old('siape_prof') }}" required autofocus>
 
-                                                @if ($errors->has('siape_aluno'))
+                                                @if ($errors->has('siape_prof'))
                                                     <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $errors->first('siape_aluno') }}</strong>
+                                                        <strong>{{ $errors->first('siape_prof') }}</strong>
                                                     </span>
                                                 @endif
                                             </div>
@@ -93,4 +93,23 @@
 	        </div>
 	    </div>
 	</div>
+    <script type="text/javascript">
+        $('#cadUsuario').on('submit', function(evt) {
+            evt.preventDefault();
+            
+            var dados = $('#cadUsuario').serialize();
+
+            $.ajax({
+                type: 'POST',
+                // dataType: 'json',
+                url:'{{ route("register_prof") }}',
+                async: true,
+                data: dados,
+                success: function (response) {
+                   window.location.replace("{{route('home')}}");
+                }
+
+            });
+        });
+    </script>
 @endsection

@@ -54,11 +54,9 @@ class RegisterController extends Controller
         $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'matricula' => ['required', 'string', 'max:255', 'unique:users'],
+            'siape' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-        $validator->setAttributeNames([
-            'email' => 'email_prof'
         ]);
 
         return $validator;
@@ -72,12 +70,15 @@ class RegisterController extends Controller
      */
     protected function create_prof(Request $data)
     {
-        return User::create([
+        $user = User::create([
             'name'     => $data['name_prof'],
             'siape'    => $data['siape_prof'],
             'email'    => $data['email_prof'],
             'password' => Hash::make($data['password_prof']),
         ]);
+        Auth::loginUsingId($user->id);  
+        return response('created', 200) 
+        ->header('Content-Type', 'text/plain');
     }
      protected function create_student(Request $data)
     {
@@ -89,6 +90,6 @@ class RegisterController extends Controller
         ]);
         Auth::loginUsingId($user->id);
         return response('created', 200)
-                  ->header('Content-Type', 'text/plain');
+        ->header('Content-Type', 'text/plain');
     }
 }

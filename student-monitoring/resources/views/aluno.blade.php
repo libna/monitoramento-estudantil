@@ -105,7 +105,8 @@
                 url:'{{ route("register_student") }}',
                 async: true,
                 data: dados,
-                success: function (response) {
+                success: function(response) {
+                    console.log("avanade");
                    window.location.replace("{{route('home')}}");
                 }
 
