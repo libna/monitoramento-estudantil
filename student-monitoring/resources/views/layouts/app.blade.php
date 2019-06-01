@@ -48,71 +48,69 @@
         <main class="py-4">
             @yield('content')
         </main>
-        <div class="links">
-            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-              <a class="navbar-brand btn btn-link" href="#">Menu Principal</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbar2">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                     <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link btn btn-outline-success mr-2" href="{{asset('/')}}">Home <span class="sr-only">(current)</span></a>
-                      </li>
                         <li class="nav-item active">
-                        <a class="nav-link btn btn-outline-success mr-2" href="#">Parceiros<span class="sr-only">(current)</span></a>
-                      </li>
+                            <a class="nav-link btn btn-outline-success mr-2" href="{{asset('/')}}">Home</a>
+                        </li>
                         <li class="nav-item active">
-                        <a class="nav-link btn btn-outline-success mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE<span class="sr-only">(current)</span></a>
-                      </li>
+                            <a class="nav-link btn btn-outline-success mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-success mr-2" href="#">Parceiros</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mx-auto order-0">
+                    <a class="navbar-brand mx-auto" href="#">Menu Principal </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        @if (Route::has('login'))
+                        @auth
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-success mr-2" href="{{ url('/home') }}">Formulários</a>
+                        </li>   
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-outline-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
 
-                            <!-- Botões de Login e Cadastro -->
-                                @if (Route::has('login'))
-                                        @auth
-                                        <li class="nav-item active">
-                                            <a class="nav-link btn btn-outline-success mr-2" href="{{ url('/home') }}">Formulários</a>
-                                        </li>   
-                                        <li class="nav-item dropdown">
-                                            <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-outline-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                {{ Auth::user()->name }} <span class="caret"></span>
-                                            </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item btn btn-dark" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item btn btn-dark" href="{{ route('logout') }}"
-                                                   onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
-                                                    {{ __('Logout') }}
-                                                </a>
-
-                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                    @csrf
-                                                </form>
-                                            </div>
-                                        </li>
-                                        @else
-                                        <li class="nav-item active">
-                                            <a class="nav-link btn btn-outline-success mr-2" href="{{ route('login') }}">Entrar</a>
-                                        </li>    
-
-                                            @if (Route::has('register'))
-                                                <li class="nav-item active">
-                                                <a class="nav-link btn btn-outline-success mr-2" href="{{ route('register') }}">Cadastro</a>
-                                                </li>
-                                              </li>  
-                                            @endif
-                                        @endauth
-                                    </div>
-                                @endif
-                              <!-- Fim de botões -->
-
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                        @else
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-success mr-2" href="{{ route('login') }}">Entrar</a>
+                        </li>
+                        @if (Route::has('register'))
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-success mr-2" href="{{ route('register') }}">Cadastro</a>
+                        </li>
+                        @endif
+                        @endauth
+                            </div>
+                        @endif
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-        <nav class="fixed-bottom bg-dark text-light">
-            <div class="text-center py-3">Monitoramento Estudantil © 2019</div>
-        </nav>      
+    <nav class="fixed-bottom bg-dark text-light">
+        <div class="text-center py-3">Monitoramento Estudantil © 2019</div>
+    </nav>      
 </body>
 </html>
