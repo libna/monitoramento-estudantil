@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Formulario;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class FormtitleController extends Controller
@@ -40,10 +40,14 @@ class FormtitleController extends Controller
     {
         $form = new Formulario();
         $form->titulo   = $request->nameForm;
-        $form->users_id = Auth::id();;
+        $form->users_id = Auth::id();
         $form->save();
 
-        return redirect()->route('perg');
+        $id = $form->id;
+
+        $value = $request->session()->get('id',$id);
+
+        return redirect()->route('perg', ['id' => $value]);
         
     }
 

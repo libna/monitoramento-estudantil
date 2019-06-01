@@ -56,5 +56,5 @@ Route::get('/index', function(){
 Route::get('/resposta','RespostaController@index')->name('resposta');
 
 //PerguntasController
-Route::get('/pergunta','PerguntasController@index')->name('perg');
+Route::get('/pergunta/{id}','PerguntasController@index')->name('perg');
 Route::post('/pergunta/save','PerguntasController@store')->name('pergSave');

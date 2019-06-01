@@ -3,16 +3,18 @@
 @section('content')
 	<div class="container" >
 		<label>cadastre sua pergunta</label>
-		<form>
-			<div class="form-group">
+		<form action="{{ route('pergSave') }}" method="POST" >
+			<div class="form-group" >
+				<input type="hidden" name="id" value="{{ $id }}">
+
 				<input class="form-control" type="text" name="pergunta">
-				<select class="form-control" id="exampleFormControlSelect1" >
+				<select class="form-control" id="exampleFormControlSelect1" name="tipoPergunta">
 						<option>Selecione o tipo da sua pergunta</option>
 					@foreach($tipoDePergunta as $tipo)
 						<option value="{{ $tipo->id}}">{{$tipo->tipo}}</option>
 					@endforeach
 				</select>
-				<input class="btn btn-primary" type="sumit" value="cadastre sua pergunta">
+				<input class="btn btn-primary" type="submit" value="cadastre sua pergunta">
 			</div>	
 		</form>
 	</div>	

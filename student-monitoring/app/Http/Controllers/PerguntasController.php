@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Pergunta;
 use App\Tipo_de_pergunta;
+use Illuminate\Http\Request;
 
 class PerguntasController extends Controller
 {
@@ -13,10 +13,10 @@ class PerguntasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, $id)
     {
         $tipoDePergunta = Tipo_de_pergunta::All();
-        return view('perguntas',compact('tipoDePergunta'));
+        return view('perguntas',compact('tipoDePergunta','id'));
     }
 
     /**
@@ -26,7 +26,7 @@ class PerguntasController extends Controller
      */
     public function create()
     {
-        //
+    
     }
 
     /**
@@ -37,7 +37,11 @@ class PerguntasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pergunta = new Pergunta();
+        $pergunta->titulo = $pergunta;
+        $pergunta->tipo_de_pergunta_id = $tipoPergunta;
+        $pergunta->titulo = $id;
+        $pergunta->save();
     }
 
     /**

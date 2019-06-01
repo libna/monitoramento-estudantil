@@ -48,16 +48,12 @@ class FormController extends Controller
         $perguntasDoForm = Pergunta::where("form_id",$request->id)->get();
 
         foreach($perguntasDoForm as $pergunta) {
-
             $pergunta_id = $pergunta->id;
-            //instaciando classe Resposta do Model
-            $resposta = new Resposta();
-            //passando o valores para o BD
             
+            $resposta = new Resposta();
             $resposta->users_id     = Auth::id();
             $resposta->respostas    = $request->get('pergunta_' . $pergunta_id);
             $resposta->perguntas_id = $pergunta_id;
-            
             $resposta->save();
         }
           $respostasform = Resposta::all();   
