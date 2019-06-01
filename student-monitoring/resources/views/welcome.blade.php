@@ -71,10 +71,10 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+ <!--            @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a class="btn btn-outline-dark" href="{{ url('/home') }}">Home</a>
+                        <a class="btn btn-outline-dark" href="{{ url('/home') }}">opa</a>
                     @else
                         <a class="btn btn-outline-dark" href="{{ route('login') }}">Login</a>
 
@@ -83,7 +83,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif -->
 
             <div class="content">
                  <div class="title m-b-md"> 
@@ -98,12 +98,9 @@
                       </button>
 
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
+                            <ul class="navbar-nav mr-auto w-100">
                               <li class="nav-item active">
                                 <a class="nav-link btn btn-outline-success mr-2" href="#">Home <span class="sr-only">(current)</span></a>
-                              </li>
-                              <li class="nav-item active">
-                                <a class="nav-link btn btn-outline-success mr-2" href="#">Formulário<span class="sr-only">(current)</span></a>
                               </li>
                                 <li class="nav-item active">
                                 <a class="nav-link btn btn-outline-success mr-2" href="#">Parceiros<span class="sr-only">(current)</span></a>
@@ -111,6 +108,27 @@
                                 <li class="nav-item active">
                                 <a class="nav-link btn btn-outline-success mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE<span class="sr-only">(current)</span></a>
                               </li>
+                              <!-- Botões de Login e Cadastro -->
+                                @if (Route::has('login'))
+                                        @auth
+                                            <li class="nav-item active">
+                                                <a class="nav-link btn btn-outline-success mr-2" href="{{ url('/home') }}">Formulários</a>
+                                            </li>   
+                                        @else
+                                        <li class="nav-item active float-right">
+                                            <a class="nav-link btn btn-outline-success mr-2" href="{{ route('login') }}">Entrar</a>
+                                        </li>    
+
+                                            @if (Route::has('register'))
+                                                <li class="nav-item active float-right">
+                                                <a class="nav-link btn btn-outline-success mr-2" href="{{ route('register') }}">Cadastro</a>
+                                                </li>
+                                              </li>  
+                                            @endif
+                                        @endauth
+                                    </div>
+                                @endif
+                              <!-- Fim de botões -->
                             </ul>
                         </div>
                     </nav>
