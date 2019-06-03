@@ -14,5 +14,7 @@ Importação de dados do questionário socioeconômico: ao prestar vestibular o 
 
 Importação de dados do sistema acadêmico: dados sobre o histórico acadêmico do aluno serão importados do Q-Acadêmico.
 
+Com os dados os professores conseguem ter informações sobre os alunos e egressos.
+
 
 
