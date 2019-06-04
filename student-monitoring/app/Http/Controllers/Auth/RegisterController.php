@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Http\Requests\MatriculaRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
@@ -49,7 +50,7 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)      
+    protected function validator(array $data)
     {
         $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
@@ -76,12 +77,15 @@ class RegisterController extends Controller
             'email'    => $data['email_prof'],
             'password' => Hash::make($data['password_prof']),
         ]);
-        Auth::loginUsingId($user->id);  
-        return response('created', 200) 
+        Auth::loginUsingId($user->id);
+        return response('created', 200)
         ->header('Content-Type', 'text/plain');
     }
      protected function create_student(Request $data)
     {
+        // consulta ao banco para saber se já existe aluno com esta matrícula
+        // caso exista, retorna um cõdigo de erro (ver como faz isso no laravel (retornar cõdigo http especĩfico))
+        // caso contrario, continua com o procedimento abaixo
         $user = User::create([
             'name'      => $data['name_aluno'],
             'matricula' => $data['matricula_aluno'],
@@ -91,5 +95,12 @@ class RegisterController extends Controller
         Auth::loginUsingId($user->id);
         return response('created', 200)
         ->header('Content-Type', 'text/plain');
+
+        User::where("matricula",$data["matricula_aluno"])->select('matricula')->first()->matricula;
+        if (isset($data["matricula_aluno"])) {
+            return abort(409);
+
+        }
+        return abort(100);
     }
 }

@@ -5,11 +5,23 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Cadastre-se') }}</div>
-		            <div class="card-body">
-	                    <div class="container">                        
-                            <div class="" id="aluno" >
-                                <div class="card-body">
+
+            <div class="card-header" id="titulo">{{ __('Cadastre-se') }}</div>
+                    <div id="conteudo">
+                <center><p>Cadastre a matrícula corretamente, ou haverá um erro no sistema</p></center>
+          </div>
+                <script>
+                        let titulo = document.getElementById('titulo');
+                        let conteudo = document.getElementById('conteudo');
+                        titulo.onmouseover = function() {
+                        // titulo.style.background = 'red';
+                        conteudo.style.display = 'block';
+                        }
+                        titulo.onmouseout = function() {
+                        // titulo.style.background = 'transparent';
+                        conteudo.style.display = 'none';
+                    }
+    </script>
                                     <form method="POST" action="{{ route('register_student') }}" id="cadUsuario" >
                                         @csrf
                                         <div class="form-group row">
@@ -93,10 +105,11 @@
 	        </div>
 	    </div>
 	</div>
+
     <script type="text/javascript">
         $('#cadUsuario').on('submit', function(evt) {
             evt.preventDefault();
-            
+
             var dados = $('#cadUsuario').serialize();
 
             $.ajax({
@@ -108,6 +121,9 @@
                 success: function(response) {
                     console.log("avanade");
                    window.location.replace("{{route('home')}}");
+                },
+                error: function(/*ver o que eh passado no erro de ajax (consultar documentação do jquery)*/) {
+                    // alert =)
                 }
 
             });
