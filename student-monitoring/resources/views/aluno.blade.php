@@ -7,8 +7,9 @@
             <div class="card">
 
             <div class="card-header" id="titulo">{{ __('Cadastre-se') }}</div>
+                <div class="card-body">
                     <div id="conteudo">
-                <center><p>Cadastre a matrícula corretamente, ou haverá um erro no sistema.</p></center>
+                <center><p>Cadastre a matrícula corretamente para que não há erro no cadastro.</p></center>
           </div>
                 <script>
                         let titulo = document.getElementById('titulo');
