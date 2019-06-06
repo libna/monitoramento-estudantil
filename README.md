@@ -5,7 +5,7 @@ Este sistema tem como propósito servir como uma plataforma para o desenvolvimen
 Para alcançar este propósito o sistema tem uma parte que atua para captar os dados de várias fontes, tais como, aplicação de questionários online e importação de bancos de dados dos sistemas de informação utilizados pelo IFPE (Q-Acadêmico). Para a construção das buscas haverá duas alternativas: (i) uma interface gráfica intuitiva que permita a usuários criar buscas e gerar relatórios, nesse caso tudo poderá ser feito sem a necessidade e de conhecimentos em programação, ou seja, qualquer gestor ou técnico administrativo pode gerar relatórios; (ii) ou através de um mecanismo chamado API (Interface de Programação de Aplicações) que permite o usuário com conhecimento em programação desenvolver sistemas avançados de análise de dados através técnicas específicas de Inteligência Artificial. 
 
 
-#O que o sistema deseja? 
+# O que o sistema deseja? 
  
 Coleta de Dados
 
@@ -17,7 +17,7 @@ Importação de dados do questionário socioeconômico: ao prestar vestibular o 
 
 Importação de dados do sistema acadêmico: dados sobre o histórico acadêmico do aluno serão importados do Q-Acadêmico.
 
-#Mais informações:
+# Mais informações:
 
 Com os dados os professores conseguem ter informações sobre os alunos e egressos.
 
