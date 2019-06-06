@@ -96,7 +96,7 @@
     <script type="text/javascript">
         $('#cadUsuario').on('submit', function(evt) {
             evt.preventDefault();
-            
+
             var dados = $('#cadUsuario').serialize();
 
             $.ajax({
