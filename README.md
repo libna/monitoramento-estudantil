@@ -16,5 +16,7 @@ Importação de dados do sistema acadêmico: dados sobre o histórico acadêmico
 
 Com os dados os professores conseguem ter informações sobre os alunos e egressos.
 
+Esse sistema é diferenciado pois já é apto para o que é necessário.
+
 
 
