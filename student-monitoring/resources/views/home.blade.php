@@ -20,7 +20,7 @@
         <img src="{{asset('img/mais.png')}}" alt="Ícone de Criação de Novo Formulário" class="card-img-top" style="padding: 10px;">
         <div class="card-body">
            <p class="card-text">Aqui você poderá criar um novo formulário que será destinado aos alunos.</p>
-            <a href="{{route('form', $form->id)}}" class="btn btn-primary">Entrar</a>
+            <a href="/index" class="btn btn-primary">Entrar</a>
         </div>
     </div>
 
