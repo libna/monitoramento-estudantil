@@ -45,7 +45,7 @@ class FormController extends Controller
     public function store(Request $request)
     {
         
-        $perguntasDoForm = Pergunta::where("form_id",$request->id)->get();
+        $perguntasDoForm = Pergunta::where("form_id",$request->form_id)->get();
 
         foreach($perguntasDoForm as $pergunta) {
             $pergunta_id = $pergunta->id;
