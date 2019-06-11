@@ -35,7 +35,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="background-color: transparent;border:none;">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel mt-2" style="background-color: transparent;border:none;">
             <div class="container mt-5">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
@@ -48,23 +48,23 @@
         <main class="py-4">
             @yield('content')
         </main>
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <nav class="navbar navbar-expand-md fixed-top" style="background-color: rgb(32,176,181);">
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-success mr-2" href="{{asset('/')}}">Home</a>
+                            <a class="nav-link mr-2" href="{{asset('/')}}"><img src="{{asset('img/logobola3.png')}}" alt=""></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-success mr-2" target="_blank" href="http://portal.ifpe.edu.br/">Portal IFPE</a>
+                            <a class="nav-link btn btn-outline-dark mr-2" target="_blank" href="http://portal.ifpe.edu.br/"><strong>Portal IFPE</strong></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-success mr-2" href="#">Parceiros</a>
+                            <a class="nav-link btn btn-outline-dark mr-2" href="#"><strong>Parceiros</strong></a>
                         </li>
                     </ul>
                 </div>
                 <div class="mx-auto order-0">
-                    <a class="navbar-brand mx-auto" href="#">Menu Principal </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <a class="navbar-brand mx-auto" href="#" style="color:black;">Menu Principal</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2" style="background-color: transparent; ">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
@@ -73,7 +73,7 @@
                         @if (Route::has('login'))
                         @auth
                         <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-success mr-2" href="{{ url('/home') }}">Formulários</a>
+                            <a class="nav-link btn btn-outline-dark mr-2" href="{{ url('/home') }}"><strong>Formulários</strong></a>
                         </li>   
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle btn btn-outline-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -94,11 +94,11 @@
                         </li>
                         @else
                         <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-success mr-2" href="{{ route('login') }}">Entrar</a>
+                            <a class="nav-link btn btn-outline-dark mr-2" href="{{ route('login') }}"><strong>Entrar</strong></a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-success mr-2" href="{{ route('register') }}">Cadastro</a>
+                            <a class="nav-link btn btn-outline-dark mr-2" href="{{ route('register') }}"><strong>Cadastro</strong></a>
                         </li>
                         @endif
                         @endauth
@@ -109,7 +109,7 @@
             </nav>
         </div>
     </div>
-    <nav class="fixed-bottom bg-dark text-light">
+    <nav class="fixed-bottom text-dark" style="background-color: rgb(32,176,181);">
         <div class="text-center py-3">Monitoramento Estudantil © 2019</div>
     </nav>      
 </body>
