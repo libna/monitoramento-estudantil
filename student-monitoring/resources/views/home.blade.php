@@ -17,7 +17,7 @@
   @endforeach
      <div class="card mr-2 mb-2" style="width: 18rem;">
        <div class="card-header">Novo Formulário</div>
-        <img src="{{asset('img/mais.png')}}" alt="Ícone de Criação de Novo Formulário" class="card-img-top" style="padding: 10px;">
+        <img src="{{asset('img/logomais.png')}}" alt="Ícone de Criação de Novo Formulário" class="card-img-top" style="padding: 10px;">
         <div class="card-body">
            <p class="card-text">Aqui você poderá criar um novo formulário que será destinado aos alunos.</p>
             <a href="/index" class="btn btn-primary">Entrar</a>
