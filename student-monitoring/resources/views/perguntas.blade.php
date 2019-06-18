@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container" >
-		<label>cadastre a pergunta no formulário criado.</label>.
+		<label>cadastre a pergunta no formulário criado</label>
 		<form action="{{ route('pergSave') }}" method="POST" >
 			<div class="form-group" >
 				<input type="hidden" name="id" value="{{ $id }}">
