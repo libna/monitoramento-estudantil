@@ -58,7 +58,10 @@
                             <a class="nav-link btn btn-outline-dark mr-2" target="_blank" href="http://portal.ifpe.edu.br/"><strong>Portal IFPE</strong></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-dark mr-2" href="#"><strong>Parceiros</strong></a>
+                            <a class="nav-link btn btn-outline-dark mr-2" target="_blank" href="https://portal.ifpe.edu.br/estudante"><strong>Portal Estudante</strong></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-dark mr-2" target="_blank" href="https://portal.ifpe.edu.br/servidor"><strong>Portal Servidor</strong></a>
                         </li>
                     </ul>
                 </div>
