@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+@if(Auth::user()->siape == null)
     <div class="container">
       <div class="row justify-content-center">
   @foreach($formulario as $form)
@@ -15,6 +15,10 @@
         </div>
     </div>
   @endforeach
+@endif
+
+@if(Auth::user()->matricula == null)
+<div class="container">
      <div class="card mr-2 mb-2" style="width: 18rem;">
        <div class="card-header">Novo Formulário</div>
         <img src="{{asset('img/logomais.png')}}" alt="Ícone de Criação de Novo Formulário" class="card-img-top" style="padding: 10px;">
@@ -23,5 +27,6 @@
             <a href="/index" class="btn btn-primary">Entrar</a>
         </div>
     </div>
-
+</div>
+@endif
 @endsection
