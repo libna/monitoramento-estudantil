@@ -10,9 +10,6 @@
 	                    <div class="container">
 	                    	<div class="" id="professor">
 	                            <div class="card-body">
-                                   <script>
-                                       alert("Realize seu cadastro para criar formulários");
-                                   </script>
                                     <form method="POST" action="{{ route('register_prof') }}"  id="cadUsuario" >
                                         @csrf
                                         <div class="form-group row">

@@ -12,7 +12,6 @@
                 <center><p>Cadastre a matrícula corretamente para que não haja erro no cadastro.</p></center>
           </div>
                 <script>
-                alert("Olá aluno, preencha as informações requisitadas");
                         let titulo = document.getElementById('titulo');
                         let conteudo = document.getElementById('conteudo');
                         titulo.onmouseover = function() {
