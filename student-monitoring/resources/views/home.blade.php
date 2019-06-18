@@ -10,7 +10,7 @@
        <div class="card-header">{{$form->titulo}}</div>
         <img src="{{asset('img/form-icon-2.png')}}" alt="Ícone de Formulário" class="card-img-top" style="padding: 10px;">
         <div class="card-body">
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           <p class="card-text">Neste campo você responderá perguntas de acordo com o tipo de usuário que você é: Aluno ou Egresso</p>
             <a href="{{route('form', $form->id)}}" class="btn btn-primary">Entrar</a>
         </div>
     </div>
