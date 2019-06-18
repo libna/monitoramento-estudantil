@@ -94,7 +94,7 @@
                                                 <button type="submit" class="btn btn-success" id="salvar" >
                                                     {{ __('Fazer registro') }}
                                                 </button>
-                                                <a href="{{asset('register')}}" class="ml-3" role="button">Voltar</a>
+                                                <a href="{{asset('register')}}" class="btn btn-outline-danger" role="button">Voltar</a>
                                             </div>
                                         </div>
                                     </form>

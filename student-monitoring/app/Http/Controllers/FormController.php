@@ -56,8 +56,9 @@ class FormController extends Controller
             $resposta->perguntas_id = $pergunta_id;
             $resposta->save();
         }
-          $respostasform = Resposta::all();   
-           return view('respostas',compact('respostasform'));
+     
+        $respostasform = Resposta::all();   
+        return view('respostas',compact('respostasform'));
 
     }
 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+  @if(Auth::user()->matricula == null)
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -41,7 +42,18 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>
+    @else   
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">     
+              <div class="alert alert-success" role="alert">
+                  Formulário enviado com sucesso!
+              </div>
+            </div>
+          </div>
+        </div>  
+    @endif  
 @endsection
 
 
