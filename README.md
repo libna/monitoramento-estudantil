@@ -34,7 +34,7 @@ Passo 1: git clone https://github.com/libna/monitoramento-estudantil.git (entrar
 
 No arquivo Makefile tem um código que quando rodado verifica se tem todas as ferramentas instaladas,
 se você estiver com tudo instalado poderá digitar o comando "make conf", e assim irá baixar/instalar
-todos os requesitos para navegar no site, ao fazer isso você dece dar um "cd student-monitoring" e 
+todos os requesitos para navegar no site, ao fazer isso você deve dar um "cd student-monitoring" e 
 assim digitar o comando "php artisan serve" e navegar a vontade no seu navegador para desfrutar todas
 as funcionalidades deste sistema. 
 
