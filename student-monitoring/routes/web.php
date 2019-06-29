@@ -58,3 +58,9 @@ Route::get('/resposta','RespostaController@index')->name('resposta');
 //PerguntasController
 Route::get('/pergunta/{id}','PerguntasController@index')->name('perg');
 Route::post('/pergunta/save','PerguntasController@store')->name('pergSave');
+
+
+//StatusController
+Route::get('/status','StatusController@index')->name('status');
+//VizualizarController
+Route::get('/visu','VisualizarController@index')->name('visu');

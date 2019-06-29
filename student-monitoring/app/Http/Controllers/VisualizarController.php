@@ -1,23 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Pergunta;
-use App\Tipo_de_pergunta;
+use App\Formulario;
 use Illuminate\Http\Request;
 
-class PerguntasController extends Controller
+class VisualizarController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, $id)
+    public function index()
     {
-        $tipoDePergunta = Tipo_de_pergunta::All();
-        
-        return view('perguntas',compact('tipoDePergunta','id'));
+        $formulario = Formulario::all(); 
+        return view('visualizar',compact('formulario'));
+
     }
 
     /**
@@ -27,24 +25,18 @@ class PerguntasController extends Controller
      */
     public function create()
     {
-    
+        //
     }
 
     /**
      * Store a newly created resource in storage.
-    
+     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $perguntas = new Pergunta();
-        $perguntas->titulo = $request->pergunta;
-        $perguntas->tipo_de_pergunta_id = $request->tipoPergunta[0];
-        $perguntas->form_id = $request->id;
-        $perguntas->save();
-
-        return redirect()->route('perg',$perguntas->form_id);
+        //
     }
 
     /**
