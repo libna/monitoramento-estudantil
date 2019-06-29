@@ -37,11 +37,11 @@ class PerguntasController extends Controller
      */
     public function store(Request $request)
     {
-        $pergunta = new Pergunta();
-        $pergunta->titulo = $pergunta;
-        $pergunta->tipo_de_pergunta_id = $tipoPergunta;
-        $pergunta->form_id = $id;
-        $pergunta->save();
+        $perguntas = new Pergunta();
+        $perguntas->titulo = $request->pergunta;
+        $perguntas->tipo_de_pergunta_id = $request->tipoPergunta[0];
+        $perguntas->form_id = $request->id;
+        $perguntas->save();
     }
 
     /**
