@@ -40,7 +40,7 @@ class PerguntasController extends Controller
         $pergunta = new Pergunta();
         $pergunta->titulo = $pergunta;
         $pergunta->tipo_de_pergunta_id = $tipoPergunta;
-        $pergunta->titulo = $id;
+        $pergunta->form_id = $id;
         $pergunta->save();
     }
 
