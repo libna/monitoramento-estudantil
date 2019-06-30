@@ -64,3 +64,5 @@ Route::post('/pergunta/save','PerguntasController@store')->name('pergSave');
 Route::get('/status','StatusController@index')->name('status');
 //VizualizarController
 Route::get('/visu','VisualizarController@index')->name('visu');
+Route::get('/visu/{id}', 'VisuController@index')->name('visus');
+

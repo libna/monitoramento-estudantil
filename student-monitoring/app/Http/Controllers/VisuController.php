@@ -4,19 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Resposta;
+use App\Pergunta;
 
-
-class RespostaController extends Controller
+class VisuController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {   
-        $respostas = Resposta::all();
-        return view('respostas',compact('respostas'));
+    public function index($id)
+    {
+        $see = Pergunta::where('form_id',$id);
+        return view('respostas',compact('see'));
     }
 
     /**
