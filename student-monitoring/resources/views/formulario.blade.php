@@ -21,7 +21,7 @@
                           @if($pergunta->titulo != 'CPF')
                             <input type="text" name="pergunta_{{ $pergunta->id }}" class="form-control" id="exampleFormControlInput2" placeholder="">
                            @else
-                            <input type="text" name="pergunta_{{ $pergunta->id }}" class="form-control" id="exampleFormControlInput2" placeholder="" name="cpf" onBlur="ValidarCPF(form1.cpf);" 
+                            <input type="text" name="pergunta_{{ $pergunta->id }}" class="form-control" id="exampleFormControlInput2" placeholder="" name="cpf" 
                             onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" >    
                           @endif
                         </div>
