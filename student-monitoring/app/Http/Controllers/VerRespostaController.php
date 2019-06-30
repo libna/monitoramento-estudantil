@@ -17,7 +17,7 @@ class PhotoController extends Controller
     public function index($id)
     {
         $see = Pergunta::where('form_id',$id);
-        return view('respostas',compact('see'));
+        return view('respostas',compact('session_encode(oid)'));
     }
 
     /**
