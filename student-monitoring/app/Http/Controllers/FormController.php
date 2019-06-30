@@ -57,8 +57,8 @@ class FormController extends Controller
             $resposta->save();
         }
      
-        $respostasform = Resposta::all();   
-        return view('respostas',compact('respostasform'));
+        //$respostasform = Resposta::all();   
+        return view('register');
 
     }
 

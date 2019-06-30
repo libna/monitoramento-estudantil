@@ -50,7 +50,7 @@ Route::post('/formulariotitle/save', 'FormtitleController@store')->name('salvarf
 //???
 Route::get('/index', function(){
 	return view ('home2');
-})->name('index');;
+})->name('index');
 
 //RespostaController
 Route::get('/resposta','RespostaController@index')->name('resposta');

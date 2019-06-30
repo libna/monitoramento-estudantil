@@ -12,6 +12,7 @@
 	        <div class="card-body">
 	           <p class="card-text">Neste campo você responderá perguntas de acordo com o tipo de usuário que você é: Aluno ou Egresso</p>
 	            <a href="{{route('form', $form->id)}}" class="btn btn-primary">Entrar</a>
+	            <a href="" class="btn btn-primary" >Ver Respostas</a>
 	        </div>
 	    </div>
 	  @endforeach
