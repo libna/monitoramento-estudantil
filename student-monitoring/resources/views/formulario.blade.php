@@ -26,7 +26,7 @@
                           @endif
                         </div>
                       @endforeach
-                    <button type="submit" class="btn btn-primary">Enviar Formulário</button>
+                    <button type="submit" class="btn btn-success">Enviar Formulário</button>
                     <a href="{{asset('home')}}" class="ml-3" role="button">Voltar</a>
                   </form>
                 </div>

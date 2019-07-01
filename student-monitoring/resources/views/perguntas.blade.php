@@ -15,7 +15,8 @@
 						<option value="{{$tipo->id}}">{{$tipo->tipo}}</option>
 					@endforeach
 				</select>
-				<input class="btn btn-primary mt-2" type="submit" value="Cadastar Pergunta">
+				<input class="btn btn-success mt-2" type="submit" value="Cadastar Pergunta">
+				<a href="http://localhost:8000/index" class="ml-3" role="button">Voltar</a>
 			</div>
 		</form>
 
