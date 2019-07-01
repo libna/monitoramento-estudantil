@@ -11,7 +11,7 @@
                     <div id="conteudo">
                 <center><p>Cadastre a matrícula corretamente para que não haja erro no cadastro.</p></center>
           </div>
-                <script>
+<!--                 <script>
                         let titulo = document.getElementById('titulo');
                         let conteudo = document.getElementById('conteudo');
                         titulo.onmouseover = function() {
@@ -22,7 +22,7 @@
                         // titulo.style.background = 'transparent';
                         conteudo.style.display = 'none';
                     }
-    </script>
+    </script> -->
                                     <form method="POST" action="{{ route('register_student') }}" id="cadUsuario" >
                                         @csrf
                                         <div class="form-group row">
