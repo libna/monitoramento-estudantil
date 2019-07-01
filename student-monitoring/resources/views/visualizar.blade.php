@@ -4,6 +4,7 @@
 
 @if(Auth::user()->matricula == null)
 <div class="container">
+	<div class="row justify-content-center">
       @foreach($formulario as $form)
 
 	    <div class="card mr-2 mb-2" style="width: 18rem;">
@@ -17,6 +18,7 @@
 	    </div>
 	  @endforeach
 </div>
+</div>
 
 @endif
-@endsection	
+@endsection
