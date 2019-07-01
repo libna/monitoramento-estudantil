@@ -42,11 +42,11 @@
     </div>
 
 
-    
+
     <div class="row justify-content-center">
       <div class="card ml-3 mb-2" style="width: 18rem;">
        <div class="card-header">Visualizar Formulários</div>
-        <img src="{{asset('img/form-icon-2.png')}}" alt="Ícone de Formulário" class="card-img-top" style="padding: 10px;">
+        <img src="{{asset('img/visu2.png')}}" alt="Ícone de Formulário" class="card-img-top" style="padding: 10px;">
         <div class="card-body">
            <p class="card-text">Neste campo você terá acesso a todos os formulários que você criou e que foram enviados aos alunos.</p>
             <a href="{{ route('visu') }}" class="btn btn-primary">Entrar</a>
