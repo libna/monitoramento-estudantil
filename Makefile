@@ -39,7 +39,7 @@ bd-conf:
 	cd student-monitoring && sed -i 's/DB_USERNAME.*/DB_USERNAME=estudante/' .env # ajusta o nome de usuário no .env
 	cd student-monitoring && sed -i 's/DB_PASSWORD.*/DB_PASSWORD=Estudante2019@/' .env # ajusta a senha no .env
 	cd student-monitoring && php artisan migrate:refresh --seed
-
+	cd student-monitoring && php artisan serve
 
 
 
