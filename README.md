@@ -5,13 +5,13 @@ Este sistema tem como propósito servir como uma plataforma para o desenvolvimen
 
 
 Para realizar a instalação e execução do projeto Monitoramento Estudantil Siga as instruções abaixo.
-> Caso queira selecionar uma sessão.
+> Se preferir selecionar uma sessão.
 
 - [Pré-Requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Ferramentas](#ferramentas)
 ## Pré-Requisitos
-> Modelo de banco utilizado é o relacional, de preferência (Mysql)
+> Instalação do servidor Mysql,com o seguinte comando.
 ```
 # apt-get install mysql-server
 ```
@@ -39,6 +39,9 @@ $ make conf
 - [Laravel](https://laravel.com) - PHP Framework
 - [Bootstrap](https://getbootstrap.com/) - CSS && HTML Framework
 - [Sublime Text](https://www.sublimetext.com/) - Editor de texto
+- [MYSQL](https://www.mysql.com/) -Sistema de gerenciamento de banco de dados
+- [PHP](https://php.net/) - Linguagem de programação
+
 
  
 
